@@ -1,5 +1,6 @@
 package com.umahhewika;
 
+import com.umahhewika.util.Koneksi;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -17,6 +18,11 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
+        try (var conn = Koneksi.getConnection()) {
+            System.out.println("Koneksi berhasil ke " + conn.getCatalog());
+        } catch (Exception e) {
+            System.out.println("Koneksi gagal: " + e.getMessage());
+        }
         scene = new Scene(loadFXML("primary"), 640, 480);
         stage.setScene(scene);
         stage.show();
