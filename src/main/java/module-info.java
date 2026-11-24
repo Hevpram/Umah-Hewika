@@ -4,5 +4,7 @@ module com.umahhewika {
     requires java.sql;
 
     opens com.umahhewika to javafx.fxml;
+    opens com.umahhewika.controller to javafx.fxml;
+
     exports com.umahhewika;
 }

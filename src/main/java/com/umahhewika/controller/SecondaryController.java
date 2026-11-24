@@ -1,5 +1,6 @@
-package com.umahhewika;
+package com.umahhewika.controller;
 
+import com.umahhewika.App;
 import java.io.IOException;
 import javafx.fxml.FXML;
 
