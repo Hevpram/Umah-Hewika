@@ -7,4 +7,5 @@ module com.umahhewika {
     opens com.umahhewika.controller to javafx.fxml;
 
     exports com.umahhewika;
+    exports com.umahhewika.util;
 }
